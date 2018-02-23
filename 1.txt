@@ -1,0 +1,80 @@
+package opencart_142769;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+
+public class Webdriver {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+			
+			WebDriver driver=new FirefoxDriver();
+			 
+			driver.get("https://demo.opencart.com/");
+
+			String Expected="Your Store";
+			
+			if(Expected.contentEquals(driver.getTitle())){
+				System.out.println("Title is verified");
+			}
+			else{
+				System.out.println("Title is not verified");
+			}
+			
+			driver.findElement(By.linkText("My Account")).click();
+			driver.findElement(By.linkText("Register")).click();	
+		
+			driver.findElement(By.id("input-firstname")).sendKeys("Priya");
+			driver.findElement(By.id("input-lastname")).sendKeys("Gosher");
+			driver.findElement(By.id("input-email")).sendKeys("abc@gmail.com");
+			driver.findElement(By.id("input-telephone")).sendKeys("8898181316");
+			driver.findElement(By.cssSelector("#input-password")).sendKeys("abcd123");
+			driver.findElement(By.cssSelector("#input-confirm")).sendKeys("abcd123");
+			
+			
+			
+			
+			String expected1="";
+			String Actual1=driver.findElement(By.xpath(".//*[@id='input-firstname']")).getText();
+			
+			if(expected1.contentEquals(Actual1)){
+				System.out.println("First name is verified");
+			}
+			else{
+				System.out.println("First name is not verified");
+			}
+			
+			
+			String expected2="";
+			String Actual2=driver.findElement(By.xpath(".//*[@id='input-lastname']")).getText();
+			
+			if(expected2.contentEquals(Actual2)){
+				System.out.println("Last name is verified");
+			}
+			else{
+				System.out.println("Last name is not verified");
+			}
+		
+			
+			String expected3="";
+			String Actual3=driver.findElement(By.xpath(".//*[@id='input-email']")).getText();
+			
+			if(expected3.contentEquals(Actual3)){
+				System.out.println("E-MAIL address is in correct pattern");
+			}
+			else{
+				System.out.println("E-MAIL address is not in correct pattern");
+			}
+			
+			
+			String expected4="";
+			String Actual4=driver.findElement(By.xpath(".//*[@id='input-telephone']")).getText();
+			
+			if(expected4.contentEquals(Actual4)){
+				System.out.println("Telephone number is entered correctly");
+			}
+			else{
+				System.out.println("The telephone number should consist of only 10 digits");
+			}

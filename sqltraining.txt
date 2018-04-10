@@ -1,0 +1,524 @@
+select *
+from employees 
+where hire_date like '%2005' and salary > = 3000
+
+\\
+
+select *
+from employees 
+where hire_date like '%2005' and salary > = 5000
+
+\\
+select *
+from employees 
+where hire_date like '%2005' and salary > = 8000
+
+\\
+select *
+from employees 
+where hire_date like '%2005' and salary > = 17000
+
+\\
+select *
+from employees 
+where hire_date like '%05' and salary > = 1000
+
+\\
+select *
+from employees 
+where hire_date like '%10' and salary > = 1000
+
+\\
+select *
+from employees 
+where hire_date like '%2005' group by job_id
+
+\\
+select *
+from employees 
+where hire_date like '%2005'
+
+\\
+select *
+from employees 
+where hire_date like '%2006' and salary > = 1000
+
+\\\
+select *
+from employees 
+where hire_date like '%20006' and salary > = 1000
+
+\\
+select *
+from employees 
+where hire_date like '%06' and salary > = 1000
+
+\\
+select distinct job_id
+from employees 
+
+\\
+select first_name, job_id
+from employees 
+where hire_date like '%2005' group by job_id
+
+\\
+select first_name, job_id, 
+from employees 
+where hire_date like '%2005' group by job_id
+
+
+
+dates
+\\
+select *
+from employees
+where hire_date < to_date('01-JAN-03','dd-mon-yy')
+
+
+select *
+from employees
+where hire_date < to_date('01-JAN-1903','dd-mon-rryy')
+
+select *
+from employees
+where hire_date < to_date('01-JAN-1903','dd-mon-yyyy')
+
+
+select *
+from employees
+where hire_date < to_date('01-JAN-03','dd-mon-yy')
+
+\\\\
+select *
+from employees
+where job_id like '%_Rep'
+
+select *
+from employees
+where job_id like '_%Rep'
+
+select *
+from employees
+where job_id like '%REP%'
+
+select *
+from employees
+where job_id like '%rep%'
+
+
+select *
+from employees
+where job_id like '%rep%' or like'%REP%'
+
+select *
+from employees
+where job_id like '%rep%' OR like'%REP%'
+
+
+select *
+from employees
+where job_id like '%rep%' AND '%REP%'
+
+\\
+Null
+
+select *
+from employees
+where MANAGER_ID IS NULL
+
+\\
+select salary, commission_pct, (salary*NVL(commission_pct, 0) ) total
+from employees order by commission_pct desc
+
+\\
+select salary, commission_pct, (salary*NVL(commission_pct, 0) ) total
+from employees order by commission_pct desc
+
+
+
+ 							DAY2
+
+\\
+
+
+SELECT * FROM EMPLOYEES WHERE lower(LAST_NAME)='king'
+
+\\
+
+SELECT upper(first_name), lower(last_name),initcap(job_id), lower(salary) 
+FROM EMPLOYEES 
+WHERE lower(LAST_NAME)='king'
+
+\\
+SELECT employee_id, concat(first_name, last_name) Name, job_id
+FROM EMPLOYEES 
+
+\\
+SELECT employee_id, UPPER(concat(first_name, last_name)) Name, job_id
+FROM EMPLOYEES 
+
+\\
+SELECT employee_id ||' ' ||UPPER(concat(first_name,' '||last_name)) ||' ' || SALARY ABC
+FROM EMPLOYEES 
+
+\\
+SELECT *  
+FROM EMPLOYEES 
+WHERE SUBSTR (JOB_ID, 4,3) ='REP'
+
+
+SELECT *  
+FROM EMPLOYEES 
+WHERE SUBSTR (JOB_ID, 4) ='REP'
+
+\\
+SELECT LPAD ('ABC',10,'*')
+FROM DUAL
+
+
+\\
+SELECT INSTR ('HUHEDIHFIEO','G')
+FROM DUAL
+
+\\
+SELECT *
+FROM EMPLOYEES
+WHERE UPPER(TRIM(LAST_NAME))='KING'
+
+
+\\
+SELECT  DISTINCT job_id, decode (job_id,  'ST_CLERK',  'E',  'SA_REP',  'D',  'IT_PROG',  'C',  'ST_MAN',  'B',  'AD_PRES',  'A',  '0')GRADE  
+FROM employees order by grade
+
+
+
+\\
+SELECT  LAST_NAME, hire_date, to_char(NEXT_DAY(Add_months(hire_date,6 ),'monday'),'day, ddspth "of" "the" month, YYYY ') AS REVIEW
+FROM EMPLOYEES
+ o/p
+LAST_NAME
+
+HIRE_DATE
+
+REVIEW
+
+King 06/17/2003 monday , twenty-second of the december , 2003  
+Kochhar 09/21/2005 monday , twenty-seventh of the march , 2006  
+De Haan 01/13/2001 monday , sixteenth of the july , 2001  
+Hunold 01/03/2006 monday , tenth of the july , 2006  
+Ernst 05/21/2007 monday , twenty-sixth of the november , 2007  
+Austin 06/25/2005 monday , twenty-sixth of the december , 2005  
+Pataballa 02/05/2006 monday , seventh of the august , 2006  
+Lorentz 02/07/2007 monday , thirteenth of the august , 2007  
+Greenberg 08/17/2002 monday , twenty-fourth of the february , 2003  
+Faviet 08/16/2002 monday , seventeenth of the february , 2003  
+Chen 09/28/2005 monday , third of the april , 2006  
+Sciarra 09/30/2005 monday , third of the april , 2006  
+
+
+\\\
+SELECT  LAST_NAME, NVL(TO_CHAR(commission_pct), 'No Commission') COMM 
+FROM EMPLOYEES
+
+
+LAST_NAME
+
+          COMM
+
+King No Commission 
+Kochhar No Commission 
+De Haan No Commission 
+Hunold No Commission 
+Ernst No Commission 
+Austin No Commission 
+
+\\
+SELECT  LAST_NAME,LPAD (salary,15,'$') as salary
+FROM EMPLOYEES
+
+
+LAST_NAME
+
+SALARY
+
+King $$$$$$$$$$24000 
+Kochhar $$$$$$$$$$17000 
+De Haan $$$$$$$$$$17000 
+Hunold $$$$$$$$$$$9000 
+
+\\
+SELECT  LAST_NAME,LENGTH(LAST_NAME) 
+
+FROM EMPLOYEES
+
+
+LAST_NAME
+
+LENGTH(LAST_NAME)
+
+Abel 4 
+Ande 4 
+Atkinson 8 
+Austin 6 
+
+
+\\
+SELECT LAST_NAME, ROUND(MONTHS_BETWEEN(SYSDATE,HIRE_DATE)) as "Months worked"
+FROM EMPLOYEES
+
+
+LAST_NAME
+
+Months worked
+
+King 178 
+Kochhar 151 
+De Haan 207 
+Hunold 147 
+
+
+\\
+SELECT rpad(last_name, 8)||' '||  rpad(' ', salary/1000+1, '*')  EMPLOYEES_AND_THEIR_SALARIES 
+FROM  employees
+
+
+EMPLOYEES_AND_THEIR_SALARIES
+
+King ************************ 
+Kochhar ***************** 
+De Haan ***************** 
+Hunold ********* 
+
+
+
+
+
+
+
+                                                       Joins
+\\
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME                //inner join
+FROM EMPLOYEES e, DEPARTMENTS d
+where e.department_id= d.department_id
+
+
+
+
+\\
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME
+FROM EMPLOYEES e, DEPARTMENTS d, locations l
+where e.department_id= d.department_id AND d.location_id=l.location_id
+
+
+\\
+//** column not displayed still l city is written **\\
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME                 
+FROM EMPLOYEES e, DEPARTMENTS d, locations l
+where e.department_id= d.department_id AND d.location_id=l.location_id and l.city='Seattle'
+
+
+\\
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME                       // left outer join (common + left table)
+FROM EMPLOYEES e, DEPARTMENTS d
+where e.department_id= d.department_id(+) 
+
+
+EMPLOYEE_ID
+
+LAST_NAME
+
+DEPARTMENT_ID
+
+DEPARTMENT_NAME
+
+200 Whalen	 10 	Administration 
+202 Fay 	20 	Marketing 
+201 Hartstein 	20 	Marketing 
+119 Colmenares 	30 	Purchasing 
+
+
+\\
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME         \\matching rows where 
+FROM EMPLOYEES e, DEPARTMENTS d
+where e.department_id= d.department_id(+) 
+
+union                                                                         \\union= removes duplicates & union all - it wont remove duplicates double records
+
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME           \\matching rows not there 
+FROM EMPLOYEES e, DEPARTMENTS d
+where e.department_id(+) = d.department_id
+
+
+EMPLOYEE_ID
+
+LAST_NAME
+
+DEPARTMENT_ID
+
+DEPARTMENT_NAME
+
+100 King 	90 Executive 
+101 Kochhar 	90 Executive 
+102 De Haan 	90 Executive 
+
+
+\\
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME
+FROM EMPLOYEES e, DEPARTMENTS d
+where e.department_id (+)= d.department_id 
+
+minus
+
+SELECT e.employee_id, e.LAST_NAME,e.DEPARTMENT_ID, d.DEPARTMENT_NAME
+FROM EMPLOYEES e, DEPARTMENTS d
+where e.department_id = d.department_id(+)
+
+
+EMPLOYEE_ID
+
+LAST_NAME
+
+DEPARTMENT_ID
+
+DEPARTMENT_NAME
+
+-  -  -  Benefits 
+-  -  -  Construction 
+-  -  -  Contracting 
+
+
+\\
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

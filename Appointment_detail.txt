@@ -1,0 +1,128 @@
+CREATE TABLE Appointment_table (
+  Filler_Appointment_ID varchar2(255),
+  Sending_Facility varchar2(255),
+  Procedure_Name varchar2(255),
+  COID varchar2(255),
+  Placer_Appointment_ID varchar2(100) default NULL,
+  Timestamp_tbl date
+);
+
+
+INSERT INTO Appointment_table  VALUES ('X8Y 7M5','lobortis','lectus rutrum','4484','(025) 0028 7815','02-JUN-2017');
+INSERT INTO Appointment_table  VALUES ('R3O 8L9','senectus','Phasellus dolor','5061','(016977) 0547','23-MAR-2018');
+INSERT INTO Appointment_table  VALUES ('S9T 6N6','molestie','Proin vel','3359','(014981) 24032','07-FEB-2017');
+INSERT INTO Appointment_table  VALUES ('E0H 5Q2','felis','molestie dapibus','8344','(0161) 566 8413','09-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('Q1Q 2H0','penatibus','nec, imperdiet','3571','0800 352486','19-JUN-2018');
+INSERT INTO Appointment_table  VALUES ('K3C 1Z6','vulputate','ut, pellentesque','9514','(010566) 23200','17-NOV-2017');
+INSERT INTO Appointment_table  VALUES ('X8H 0O1','senectus','mauris a','1492','(028) 7590 5374','12-MAY-2018');
+INSERT INTO Appointment_table  VALUES ('H2E 4B9','lacinia','arcu. Morbi','9253','0892 400 7737','29-AUG-2016');
+INSERT INTO Appointment_table  VALUES ('V2M 6M5','In','nulla. Integer','3333','0845 46 44','18-AUG-2016');
+INSERT INTO Appointment_table  VALUES ('D9J 5B5','Phasellus','aliquet magna','1714','0820 453 4366','12-MAR-2017');
+INSERT INTO Appointment_table  VALUES ('H7U 6D5','vulputate,','Suspendisse tristique','1903','0951 823 1921','23-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('M3W 9L4','augue','lobortis. Class','3300','0845 46 43','09-SEP-2017');
+INSERT INTO Appointment_table  VALUES ('N4F 7T0','dis','fringilla, porttitor','3285','(010044) 26539','08-FEB-2018');
+INSERT INTO Appointment_table  VALUES ('V5C 9F7','libero.','Etiam gravida','8246','076 7566 5938','14-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('W7J 9P8','facilisis.','arcu ac','1613','0877 803 7071','23-AUG-2017');
+INSERT INTO Appointment_table  VALUES ('K5M 9H5','semper','felis, adipiscing','9129','(016977) 0913','22-SEP-2017');
+INSERT INTO Appointment_table  VALUES ('A3U 1Z7','Cras','quis, pede.','6235','0977 998 1982','12-MAY-2018');
+INSERT INTO Appointment_table  VALUES ('E2R 8E6','consectetuer','eget nisi','4488','076 5009 4745','06-OCT-2016');
+INSERT INTO Appointment_table  VALUES ('Q7G 0C9','iaculis','lectus pede,','1505','(0112) 670 1465','29-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('V5N 1Y4','sem','purus ac','8156','0800 535 5472','19-FEB-2017');
+INSERT INTO Appointment_table  VALUES ('K2X 5X8','et','enim nec','3106','(01025) 650808','31-MAY-2018');
+INSERT INTO Appointment_table  VALUES ('X8Q 8H7','in,','arcu. Vestibulum','3535','07498 649015','27-APR-2018');
+INSERT INTO Appointment_table  VALUES ('H2E 3U4','dapibus','pede. Nunc','1845','0303 213 5267','04-JAN-2018');
+INSERT INTO Appointment_table  VALUES ('L1N 1K8','Vivamus','non, luctus','8573','0500 596433','18-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('I2Y 8A6','sem,','a, scelerisque','9192','(019289) 05400','05-OCT-2016');
+INSERT INTO Appointment_table  VALUES ('T4H 9F6','placerat.','et risus.','8155','(016977) 4115','17-JUL-2018');
+INSERT INTO Appointment_table  VALUES ('S5S 0N1','libero.','ante lectus','8467','0800 425335','18-MAR-2017');
+INSERT INTO Appointment_table  VALUES ('N1G 1K3','feugiat','Cras interdum.','4941','0992 843 1817','20-DEC-2017');
+INSERT INTO Appointment_table  VALUES ('V0Z 8X9','vel','adipiscing non,','7345','070 6844 7490','04-JUN-2017');
+INSERT INTO Appointment_table  VALUES ('E0N 0T6','et,','non arcu.','5766','055 3958 9895','31-MAR-2018');
+INSERT INTO Appointment_table  VALUES ('K6W 4S4','Vivamus','fermentum fermentum','3713','07916 955819','13-NOV-2016');
+INSERT INTO Appointment_table  VALUES ('C2L 4Y7','a','augue ac','3408','0845 46 45','05-APR-2017');
+INSERT INTO Appointment_table  VALUES ('U5S 2A4','at','odio vel','9283','056 7604 1322','02-FEB-2018');
+INSERT INTO Appointment_table  VALUES ('R0L 3Y6','magnis','risus. Donec','3159','055 9963 7826','24-DEC-2016');
+INSERT INTO Appointment_table  VALUES ('V2R 0U4','Proin','mus. Proin','3469','0979 936 6882','28-JUL-2018');
+INSERT INTO Appointment_table  VALUES ('H0D 5C2','orci,','ante dictum','6504','0301 945 4795','21-OCT-2017');
+INSERT INTO Appointment_table  VALUES ('W8H 0P9','in','eleifend vitae,','4508','(015791) 22792','03-MAY-2018');
+INSERT INTO Appointment_table  VALUES ('E0D 9F4','neque.','eu tempor','4546','0852 399 8973','09-APR-2018');
+INSERT INTO Appointment_table  VALUES ('S8T 3T2','Phasellus','orci tincidunt','9206','056 5806 5341','04-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('K4N 8Z9','sagittis','molestie in,','5320','0834 553 2523','03-OCT-2017');
+INSERT INTO Appointment_table  VALUES ('U2R 8B9','malesuada','Proin vel','6702','0845 46 49','21-AUG-2017');
+INSERT INTO Appointment_table  VALUES ('N2U 2V5','auctor','augue malesuada','8634','(020) 2267 1275','20-FEB-2017');
+INSERT INTO Appointment_table  VALUES ('D3P 0Q9','Donec','eu, eleifend','7470','0981 623 6757','03-JAN-2018');
+INSERT INTO Appointment_table  VALUES ('F5Y 1T3','turpis','Quisque tincidunt','3229','0800 975814','29-AUG-2016');
+INSERT INTO Appointment_table  VALUES ('U8Z 4W0','enim.','elementum, dui','2839','0800 270 7227','18-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('W6G 5P4','massa','eget nisi','6773','070 1027 7313','04-APR-2018');
+INSERT INTO Appointment_table  VALUES ('O0Q 0V0','arcu.','vitae, posuere','7231','(01026) 441635','26-JAN-2018');
+INSERT INTO Appointment_table  VALUES ('P6S 4B4','Nunc','ac orci.','4951','(01722) 78940','12-MAR-2018');
+INSERT INTO Appointment_table  VALUES ('D0Z 6W1','lacus.','ornare. In','2476','07817 485767','27-SEP-2017');
+INSERT INTO Appointment_table  VALUES ('O1O 5A3','vehicula.','magna nec','9026','(01082) 01939','25-JUL-2018');
+INSERT INTO Appointment_table  VALUES ('O6D 6T1','lobortis','fringilla mi','8196','07624 151179','19-FEB-2018');
+INSERT INTO Appointment_table  VALUES ('A1R 4O4','pharetra','Fusce dolor','2748','0800 1111','15-OCT-2017');
+INSERT INTO Appointment_table  VALUES ('T0Y 3Z4','nonummy','Donec tempor,','6189','0800 790 3127','03-DEC-2017');
+INSERT INTO Appointment_table  VALUES ('O5H 6W2','lobortis.','est, vitae','8434','(0111) 459 7109','04-MAY-2017');
+INSERT INTO Appointment_table  VALUES ('C4B 9B4','In','interdum enim','9664','(0191) 778 5105','19-NOV-2017');
+INSERT INTO Appointment_table  VALUES ('S8T 7X5','massa.','ipsum primis','2306','0500 357249','29-MAY-2017');
+INSERT INTO Appointment_table  VALUES ('U6L 9Y5','Nulla','Fusce dolor','1597','(016977) 5545','27-JUL-2018');
+INSERT INTO Appointment_table  VALUES ('S8N 2O4','Mauris','porttitor interdum.','3506','0800 872 5374','20-MAY-2018');
+INSERT INTO Appointment_table  VALUES ('D3J 4E8','id,','nec metus','3641','(016977) 8254','27-MAY-2017');
+INSERT INTO Appointment_table  VALUES ('W5M 6I2','hendrerit','Nulla eu','8659','055 5247 5422','05-AUG-2018');
+INSERT INTO Appointment_table  VALUES ('M1Z 0A7','pharetra,','congue. In','5966','0800 1111','25-NOV-2016');
+INSERT INTO Appointment_table  VALUES ('E6N 6A8','eu,','egestas. Duis','9767','07624 364635','03-OCT-2016');
+INSERT INTO Appointment_table  VALUES ('I7W 2F8','in,','vel arcu.','9245','(0119) 172 0213','24-FEB-2018');
+INSERT INTO Appointment_table  VALUES ('W9W 3D2','ac','lobortis risus.','8783','(01635) 194574','22-SEP-2017');
+INSERT INTO Appointment_table  VALUES ('P7E 6X7','taciti','Cras sed','3612','0800 1111','15-JAN-2018');
+INSERT INTO Appointment_table  VALUES ('S3F 6Y3','sed,','nunc risus','7770','(028) 2021 8633','13-MAY-2018');
+INSERT INTO Appointment_table  VALUES ('N1Q 6X1','facilisis','mi lorem,','4056','0845 46 47','21-JUL-2018');
+INSERT INTO Appointment_table  VALUES ('V1X 2J3','aliquet','erat volutpat.','6001','(0118) 623 5514','14-SEP-2017');
+INSERT INTO Appointment_table  VALUES ('I6A 9E5','ut,','metus urna','4050','056 5381 8666','26-APR-2018');
+INSERT INTO Appointment_table  VALUES ('Y2A 8X0','nisl.','aliquet, sem','2423','0966 004 7508','07-SEP-2016');
+INSERT INTO Appointment_table  VALUES ('C4Z 5O2','pulvinar','auctor odio','4244','070 8928 0283','13-MAY-2017');
+INSERT INTO Appointment_table  VALUES ('V0V 2S2','ullamcorper','condimentum. Donec','8303','0845 46 44','21-SEP-2016');
+INSERT INTO Appointment_table  VALUES ('U8E 8W1','ligula.','Phasellus fermentum','3069','076 9850 4499','20-DEC-2017');
+INSERT INTO Appointment_table  VALUES ('A8M 9U0','tincidunt','ante bibendum','8213','(0141) 595 6126','14-SEP-2017');
+INSERT INTO Appointment_table  VALUES ('W2K 0E0','Cras','tellus eu','7019','0800 419547','06-DEC-2017');
+INSERT INTO Appointment_table  VALUES ('P1I 2R1','ornare,','nonummy. Fusce','1567','0883 220 0588','06-MAR-2018');
+INSERT INTO Appointment_table  VALUES ('O4F 8D2','mauris,','eget, volutpat','4712','056 9313 3625','26-JUN-2018');
+INSERT INTO Appointment_table  VALUES ('Y6J 4R5','rutrum','hendrerit consectetuer,','7518','0500 178083','14-JUL-2018');
+INSERT INTO Appointment_table  VALUES ('X5Q 0A7','senectus','Cras sed','4228','0392 781 0218','24-MAY-2018');
+INSERT INTO Appointment_table  VALUES ('P0Z 9S0','Nulla','fermentum arcu.','5855','07603 618851','19-JUN-2018');
+INSERT INTO Appointment_table  VALUES ('T8D 6N7','tempor','scelerisque scelerisque','4983','0800 1111','09-NOV-2016');
+INSERT INTO Appointment_table  VALUES ('J1S 9B4','Donec','sed leo.','8647','0333 431 1795','22-DEC-2017');
+INSERT INTO Appointment_table  VALUES ('X7C 6U3','vitae','mus. Aenean','7277','055 0816 3758','13-SEP-2016');
+INSERT INTO Appointment_table  VALUES ('E1P 7H9','egestas','arcu imperdiet','5251','055 6832 3345','17-OCT-2017');
+INSERT INTO Appointment_table  VALUES ('Y8M 7H7','augue.','nec urna','8052','0800 277 2043','10-SEP-2017');
+INSERT INTO Appointment_table  VALUES ('P4L 8S3','sit','massa. Suspendisse','1170','0973 419 9237','29-JUN-2018');
+INSERT INTO Appointment_table  VALUES ('W0L 1O1','urna','nulla. In','3086','07444 824601','05-JAN-2017');
+INSERT INTO Appointment_table  VALUES ('U3O 3X6','rhoncus','Curabitur consequat,','4705','(01498) 32471','21-JUL-2018');
+INSERT INTO Appointment_table  VALUES ('F8F 7L8','ac','nunc risus','6400','(01213) 83064','23-NOV-2016');
+INSERT INTO Appointment_table  VALUES ('A1X 5I4','ullamcorper.','leo, in','7620','0800 391 6740','07-AUG-2016');
+INSERT INTO Appointment_table  VALUES ('A2W 5P0','luctus','placerat, orci','2447','055 9478 7164','06-DEC-2016');
+INSERT INTO Appointment_table  VALUES ('Y8V 9S9','In','ultrices iaculis','6732','(0121) 962 1689','24-OCT-2017');
+INSERT INTO Appointment_table  VALUES ('U0Y 6A0','vel,','vehicula aliquet','9484','0500 887576','20-JUN-2017');
+INSERT INTO Appointment_table  VALUES ('B7K 1O8','Vivamus','feugiat placerat','1542','(01763) 158069','25-DEC-2017');
+INSERT INTO Appointment_table  VALUES ('L1T 3M0','mi','montes, nascetur','2368','(0141) 482 0108','13-APR-2017');
+INSERT INTO Appointment_table  VALUES ('J6B 2D7','id,','tristique ac,','3420','055 7831 2352','29-AUG-2017');
+INSERT INTO Appointment_table  VALUES ('N6Y 7X5','velit.','Morbi vehicula.','4346','(022) 2445 4305','04-JUL-2017');
+INSERT INTO Appointment_table  VALUES ('B2R 2V5','massa','purus gravida','2843','0500 554541','24-NOV-2017');
+INSERT INTO Appointment_table  VALUES ('S6I 6V6','non','at pede.','2311','0500 861663','21-AUG-2016');
+
+
+
+
+CREATE TABLE APNTMNT_DTL_STG (
+  APPNTMNT_ID	varchar2(255) primary key,
+FAC_ID	varchar2(25),
+PRCDR_NAME	varchar2(100),
+  COID 	int,
+PLCR_APPNTMNT_ID	varchar2(100),
+EXTRCT_TS	date
+)
+
+
+
+
+
+
+

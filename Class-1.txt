@@ -1,0 +1,185 @@
+Analytic functions
+Row_number()
+Denserank()
+rank()
+------------------
+create table emp_rnum(eid int,ename varchar2(30),sal int,
+dept_id int);
+insert into emp_rnum values(1,'Kajal',34000,10);
+insert into emp_rnum values(2,'Anu',14000,20);
+insert into emp_rnum values(10,'Jimmi',14000,20);
+insert into emp_rnum values(3,'Lavya',44000,20);
+insert into emp_rnum values(4,'Jaya',34900,10);
+insert into emp_rnum values(5,'Isha',33000,30);
+insert into emp_rnum values(6,'Naina',8800,40);
+insert into emp_rnum values(7,'Joy',88000,30);
+	
+
+select eid,ename,sal,dept_id,row_number() over(
+partition by dept_id order by sal) as rnum from emp_rnum;
+
+select eid,ename,sal,dept_id from(
+select eid,ename,sal,dept_id,row_number() over(
+partition by dept_id order by sal) as rnum from emp_rnum)
+r where r.rnum=1 order by r.sal;
+
+
+
+
+
+select eid,ename,sal,dept_id from(
+select eid,ename,sal,dept_id,row_number() over(
+partition by dept_id order by sal asc) as rnum from emp_rnum)
+r where r.rnum=2 order by r.sal;
+
+
+create table emp_rnum_NVL(eid int,ename varchar2(30),sal int,
+BONUS int);
+insert into emp_rnum_NVL values(1,'Kajal',34000,1000);
+insert into emp_rnum_NVL values(2,'Anu',14000,2120);
+insert into emp_rnum_NVL values(10,'Jimmi',14000,NULL);
+
+
+
+
+
+select eid,ename,sal,dept_id from(
+select eid,ename,sal,dept_id,rank() over(
+partition by dept_id order by sal asc) 
+as rnum from emp_rnum)
+r where r.rnum=2 order by r.sal;
+
+
+
+select eid,ename,sal,dept_id from(select eid,ename,sal,dept_id,dense_rank() over(
+partition by dept_id order by
+sal desc) as rnum from emp_rnum)r where r.rnum=2
+
+
+select dept_id,rnk,sal,count(*) from(
+select eid,ename,sal,dept_id,rank() over(
+partition by dept_id order by sal asc) 
+as rnk from emp_rnum) t group by t.dept_id,t.rnk,t.sal 
+having count(*)>1
+
+
+
+
+select dept_id,rnk,sal,count(*) from(
+select eid,ename,sal,dept_id,rank() over(
+partition by dept_id order by sal asc) 
+as rnk from emp_rnum) t group by t.dept_id,t.rnk,t.sal 
+having count(*)>1
+
+
+select eid,ename,sal,dept_id from(
+select eid,ename,sal,dept_id,
+dense_rank() over(order by sal)as r 
+from emp_rnum)t where t.r=6;
+
+
+
+
+
+
+
+
+select eid,ename,sal,dept_id from(
+select eid,ename,sal,dept_id,
+row_number() over(order by sal)as r 
+from emp_rnum)t where t.r=3;
+
+
+select eid,ename,sal,dept_id from(
+select eid,ename,sal,dept_id,
+rownum as rwnum
+from emp_rnum)t where t.rwnum=3;
+
+
+
+select * from emp where rowid in (select decode(mod(rownum,2),0,rowid, null) from emp_rnum)
+
+
+
+
+delete from emptable where (dept_id,date) in(
+select dept_id,date from temp)
+
+
+
+insert into temp
+select col from(select col,row_number() over(partition by 
+dept_id order by date desc)as rnum from table)t 
+where t.rnum>1;
+
+10 |20may-1
+10 |19may-2
+10 |18may-3
+
+
+
+
+
+
+;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

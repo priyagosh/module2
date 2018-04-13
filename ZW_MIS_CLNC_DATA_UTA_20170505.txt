@@ -1,0 +1,8 @@
+patient_prob|12|20160701|File|MT6.0|M
+patient_problem|11|20160801|File|MT6.0|M
+test_undergo|99|20170701|File|MT6.0|M
+blood_test|11|20170710|File|MT6.0|P
+Biopsy|99|20140501|File|MT6.0|M
+Labtest|76|20150901|File|MT6.0|P
+sugartest|65|20170722|File|MT6.0|M
+bloodtest|32|20170809|File|MT6.0|M
